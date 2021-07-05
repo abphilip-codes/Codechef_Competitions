@@ -1,4 +1,4 @@
-# 
+# https://www.codechef.com/JULY21C/problems/XXOORR
 
 for T in range(int(input())):
     a1 = []
