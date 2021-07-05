@@ -233,7 +233,7 @@ Sample Output
 Explanation
 
     Test Case 1: We can change the salary of the third person to 1 and use 
-    1 as the denomination. So in total we need 11+21+11 = 1+2+1 = 4 notes.
+    1 as the denomination. So in total we need 1/1+2/1+1/1 = 1+2+1 = 4 notes.
 
     Test Case 2: We can change the salary of the first person to 2 and use 
     2 as the denomination. So in total we need 1+2+1 = 4 notes.
