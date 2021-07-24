@@ -99,62 +99,70 @@ Explanation
 <br />
 
 ```
-3. Given an array A1,A2…AN, find the minimum number of operations (possibly zero)
-required to convert all integers in A to 0
+3. During a fight with the Joker, Batman's eyes lose the capability to distinguish 
+between some pairs of colors. Each color has an integer ID from 1 to N. There are 
+M lists where each color belongs to exactly one list. Batman can distinguish colors belonging to different lists, but he cannot distinguish colors belonging to the same 
+list. Given a strip of L colors, find the different number of segments Batman will 
+see as a result of his disability. Two positions of the strip are said to belong to 
+the same segment if they are adjacent on the strip and Batman cannot distinguish their 
+colors. See the sample explanation for clarity.
 
-In one operation, you choose a non-negative integer p (p≥0), select at most K 
-indices in the array A, and for each selected index i, replace Ai with Ai⊕2^p. 
-Here, ⊕ denotes bitwise XOR.
+Input Format
 
-Input
+    The first line contains an integer T, the number of test cases. 
+    Then the test cases follow.
+    The first line contain three integers N, M, and L - the number of colors, the 
+    number of lists, and the length of the strip, respectively.
+    Each of the next M lines describes a list. It begins with an integer Ki, 
+    the length of the i-th list, followed by Ki integers Ai1,Ai2,…,AiKi - the color 
+    IDs of the i-th list.
+    The next line contains L integers S1,S2,…,SL - the color IDs of the strip.
 
-    The first line contains an integer T - the number of test cases. 
-    Then T test cases follow.
-    The first line of each test case contains two integers N, K - the 
-    size of the array and the maximum number of elements you can select 
-    in an operation.
-    The second line of each test case contains N integers A1,A2…AN
+Output Format
 
-Output
-
-    For each test case, output the minimum number of operations to make all 
-    elements of the array 0
+    For each test case, output in a single line the answer to the problem.
 
 Constraints
 
-    1≤T≤10^5
-    1≤N,K≤10^5
-    0≤Ai≤10^9
-    The sum of N over all test cases does not exceed 2*10^5
+    1≤T≤10
+    1≤M≤N≤10^5
+    1≤L≤10^5
+    1≤Ki,Aij,Si≤N
+    ∑Mi=1Ki=N
 
-Subtasks
+    Each color belongs to exactly one list.
 
-    Subtask #1 (100 points): Original Constraints
+Sample Input 1
 
-Sample Input
+    3
+    2 2 2
+    1 2
+    1 1
+    2 1
+    2 2 4
+    1 1
+    1 2
+    1 2 2 1
+    3 2 3
+    2 1 3
+    1 2
+    1 3 1
 
+Sample Output 1
+
+    2
+    3
     1
-    3 2
-    3 6 10
-
-Sample Output
-
-    5
 
 Explanation
 
-    Here is one way to achieve [0,0,0]
-    from [3,6,10] in 5
-
-Operations:
-
-    Choose p=0 and indices {1}. Now A becomes [2,6,10].
-    Choose p=1 and indices {1,2}. Now A becomes [0,4,10]
-    Choose p=1 and indices {3}. Now A becomes [0,4,8]
-    Choose p=2 and indices {2}. Now A becomes [0,0,8]
-    Choose p=3 and indices {3}. Now A becomes [0,0,0]
-
-    It can be shown that at least 5 operations are required.
+    Test Case 1: Since the strip is composed of colors from different lists, the 
+    answer is the length of the strip, which is 2.
+    Test Case 2: The first and second index have colors from different lists, and the 
+    third and fourth index have colors from different lists. So the strip is seen to 
+    be composed of 3 consecutive segments.
+    Test Case 3: Since the strip is composed of colors from the same list, the answer 
+    is 1 segment.
 ```
 <br />
 
