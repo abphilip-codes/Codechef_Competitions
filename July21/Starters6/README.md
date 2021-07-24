@@ -1,62 +1,55 @@
-# July 2021: Long Challenge
+# July 2021: Starters 6
 
 ```
-1. Chefland has 7 days in a week. Chef is very conscious 
-about his work done during the week. There are two ways he 
-can spend his energy during the week. The first way is to do x
-units of work every day and the second way is to do y (>x) 
-units of work for the first d (<7) days and to do z (<x) units 
-of work thereafter since he will get tired of working more in 
-the initial few days.
+1. In a season, each player has three statistics: runs, wickets, and catches. Given 
+the season stats of two players A and B, denoted by R, W, and C respectively, the 
+person who is better than the other in the most statistics is regarded as the better
+overall player. Tell who is better amongst A and B. It is known that in each statistic, 
+the players have different values.
 
-Find the maximum amount of work he can do during the week if 
-he is free to choose either of the two strategies.
+Input Format
 
-Input
+    The first line contains an integer T, the number of test cases. Then the test 
+    cases follow. Each test case contains two lines of input. The first line contains 
+    three integers R1, W1, C1, the stats for player A.
+    The second line contains three integers R2, W2, C2, the stats for player B.
 
-    The first line contains an integer T, the number of test cases. 
-    Then the test cases follow.
-    Each test case contains a single line of input, four integers 
-    d, x, y, z
+Output Format
 
-Output
-
-    For each testcase, output in a single line the answer to the problem.
+    For each test case, output in a single line "A" (without quotes) if player A
+    is better than player B and "B" (without quotes) otherwise.
 
 Constraints
 
-    1≤T≤5*10^3
-    1≤d<7
-    1≤z<x<y≤18
+    1≤T≤1000
+    0≤R1,R2≤500
+    0≤W1,W2≤20
+    0≤C1,C2≤20
+    R1≠R2
+    W1≠W2
+    C1≠C2
 
-Subtasks
-
-    Subtask #1 (100 points): Original constraints
-
-Sample Input
+Sample Input 1
 
     3
-    1 2 3 1
-    6 2 3 1
-    1 2 8 1
+    0 1 2
+    2 3 4
+    10 10 10
+    8 8 8
+    10 0 10
+    0 10 0
 
-Sample Output
+Sample Output 1
 
-    14
-    19
-    14
+    B
+    A
+    A
 
 Explanation
 
-    Test Case 1: Using the first strategy, Chef does 2⋅7=14 units of 
-    work and using the second strategy Chef does 3⋅1+1⋅6=9 units of work. 
-    So the maximum amount of work that Chef can do is max(14,9)=14 
-    units by using the first strategy.
-
-    Test Case 2: Using the first strategy, Chef does 2⋅7=14 units of work 
-    and using the second strategy Chef does 3⋅6+1⋅1=19 units of work. So the 
-    maximum amount of work that Chef can do is max(14,19)=19 units by using 
-    the second strategy.
+    Test Case 1: Player B is better than A in all 3 fields.
+    Test Case 2: Player A is better than B in all 3 fields.
+    Test Case 3: Player A is better than B in runs scored and number of catches.
 ```
 <br />
 
