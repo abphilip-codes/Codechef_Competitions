@@ -54,57 +54,47 @@ Explanation
 <br />
 
 ```
-2. n Chefland, the speed of light is c m/s, and acceleration due to gravity is 
-g m/s^2. Find the smallest height (in meters) from which Chef should jump such 
-that during his journey down only under the effect of gravity and independent of 
-any air resistance, he achieves the speed of light and verifies Einstein's theory 
-of special relativity.
+2. There are three people, and each of them has an unbiased 6-sided die. The result 
+of rolling a die will be a number between 1 and 6 (inclusive) with equal probability.
+The three people throw their dice simultaneously. In this game, the third person wins 
+only if his number is strictly greater than the sum of the other two numbers. Given 
+that the first person rolls the value X and the second person rolls the value Y, what 
+is the probability the third person will win?
 
-Assume he jumps at zero velocity and at any time, his velocity (v) and depth of 
-descent (H) are related as v^2=2⋅g⋅H.
+Input Format
 
-Input
+    The first line contains an integer T, the number of test cases. Then the test 
+    cases follow. Each test case contains two integers X and Y.
 
-    The first line contains an integer T, the number of test cases. Then the 
-    test cases follow.
-    Each test case contains a single line of input, two integers g, c
+Output Format
 
-Output
-
-    For each test case, output in a single line the answer to the problem. We can 
-    show that under the constraints, the answer is an integer.
+    For each test case, output the probability that the third person wins.
+    Your answer will be considered correct if its absolute error doesn't exceed 10−6.
 
 Constraints
 
-    1≤T≤5*10^3
-    1≤g≤10
-    1000≤c≤3000
-    2⋅g divides c^2
+    1≤T≤36
+    1≤X,Y≤6
 
-Subtasks
-
-    Subtask #1 (100 points): Original constraints
-
-Sample Input
+Sample Input 1
 
     3
-    7 1400
-    5 1000
-    10 1000
+    1 3
+    2 4
+    2 3
 
-Sample Output
+Sample Output 1
 
-    140000
-    100000
-    50000
+    0.333333
+    0
+    0.166666
 
 Explanation
 
-    Test Case 1: For Chef to achieve the speed of light, the minimum height 
-    required is c^2/2⋅g = 1400⋅1400/14 = 140000 meters.
-
-    Test Case 3: For Chef to achieve the speed of light, the minimum height 
-    required is c^2/2⋅g = 1000⋅1000/20 = 50000 meters.
+    In the first test case, out of the six outcomes of a die, the third person wins 
+    if the result is either 5 or 6. So the probability of winning is 26≈0.333333.
+    In the second test case, the third person only wins if the result is greater than 
+    6, which is impossible. So the probability of winning is 0.
 ```
 <br />
 
