@@ -167,68 +167,50 @@ Explanation
 <br />
 
 ```
-4. You are the owner of a big company. You are so rich, that the government 
-has allowed you to print as many notes as you want of any single value that 
-you like. You also have peculiar behavioral traits and you often do things 
-that look weird to a third person.
+4. You are given an array A consisting of N integers and Q queries. Each query is 
+described by two integers L and R. For each query, output the number of tuples (i,j,k) 
+such that L≤i<j<k≤R and Ai+Aj+Ak is an even number.
 
-You have N employees, where the i-th employee has salary Ai. You want to pay 
-them using a denomination that you create. You are also eco-friendly and wish 
-to save paper. So, you wish to pay them using as few notes as possible. Find 
-out the minimum number of notes required if you can alter the salary of at most 
-one employee to any positive integer that you like, and choose the positive 
-integer value that each note is worth (called its denomination).
+Input Format
 
-Each employee must receive the exact value of his/her salary and no more.
+    The first line contains an integer T, the number of test cases. Then the test cases 
+    follow. The first line of each test case contains two integers N and Q. The next line 
+    contains N integers A1,…,AN. Then Q lines follow, each containing two integers Li 
+    and Ri.
 
-Input
+Output Format
 
-    The first line contains an integer T, the number of test cases. 
-    Then the test cases follow.
-    
-    The first line of each test case contains a single integer N
-    The second line contains N integers A1,A2,…,AN, where Ai is 
-    the salary of the i-th employee.
-
-Output
-
-    For each test case, output in a single line the answer to the problem.
+    For each query, output the number of tuples possible as mentioned in the 
+    problem statement.
 
 Constraints
 
-    1≤T≤12⋅10^4
-    1≤N≤10^5
-    1≤Ai≤10^9
-    The sum of N over all test cases is at most 10^6
+    1≤T≤10^3
+    1≤N,Q≤10^5
+    0≤Ai≤10^6
+    1≤Li≤Ri≤N
 
-Subtasks
+    The sum of N over all test cases does not exceed 10^6.
+    The sum of Q over all test cases does not exceed 10^5
 
-    Subtask #1 (100 points): Original constraints
+Sample Input 1
 
-Sample Input
+    1
+    6 3
+    1 2 3 4 5 6
+    1 3
+    2 5
+    1 6
 
-    3
-    3
-    1 2 3
-    3
-    8 4 2
+Sample Output 1
+
+    1
     2
-    2 2 
-
-Sample Output
-
-    4
-    4
-    2
+    10
 
 Explanation
 
-    Test Case 1: We can change the salary of the third person to 1 and use 
-    1 as the denomination. So in total we need 1/1+2/1+1/1 = 1+2+1 = 4 notes.
-
-    Test Case 2: We can change the salary of the first person to 2 and use 
-    2 as the denomination. So in total we need 1+2+1 = 4 notes.
-
-    Test Case 3: We can use 2 as the denomination and we need not change 
-    the salary of any person. So in total we need 1+1 = 2 notes.
+    For the first query, we can choose (1,2,3) since A1+A2+A3=6 is an even number. 
+    For the second query, we can choose (2,3,5) since A2+A3+A5=10 is even, and (3,4,5) 
+    since A3+A4+A5=12 is even.
 ```
