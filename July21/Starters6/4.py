@@ -1,4 +1,4 @@
-#
+# https://www.codechef.com/START6C/problems/ETUP
 
 for T in range(int(input())):
     N,Q=map(int,input().split())
