@@ -147,6 +147,7 @@ Explanation
 
     In the first test case, for N=2, you have the array A=[0,1,2,3]. No swap operation 
     is allowed hence value of array A=(0⊕0)+(1⊕1)+(2⊕2)+(3⊕3)=0+0+0+0=0.
+    
     In the second test case, initially the array A=[0,1,2,3]. If you swap A1 and A2, 
     A becomes [0,2,1,3]. Now value of array A=(0⊕0)+(2⊕1)+(1⊕2)+(3⊕3)=0+3+3+0=6. There 
     is no possible way such that value of array A becomes greater than 6 using one swap operation.
@@ -154,50 +155,46 @@ Explanation
 <br />
 
 ```
-4. You are given an array A consisting of N integers and Q queries. Each query is 
-described by two integers L and R. For each query, output the number of tuples (i,j,k) 
-such that L≤i<j<k≤R and Ai+Aj+Ak is an even number.
+4. You are given two integers A,B. You have to choose an integer X in the range 
+[minimum(A,B), maximum(A,B)] such that: ⌈(B−X)/2⌉+⌈(X−A)/2⌉ is maximum. What is the 
+maximum sum you can obtain if you choose X optimally?
+
+Note: ⌈x⌉ Returns the smallest integer that is greater than or equal to x (i.e rounds up 
+to the nearest integer). For example, ⌈1.4⌉=2, ⌈5⌉=5, ⌈−1.5⌉=−1, ⌈−3⌉=−3, ⌈0⌉=0.
 
 Input Format
 
-    The first line contains an integer T, the number of test cases. Then the test cases 
-    follow. The first line of each test case contains two integers N and Q. The next line 
-    contains N integers A1,…,AN. Then Q lines follow, each containing two integers Li 
-    and Ri.
+    First line will contain T, number of testcases. Then the testcases follow.
+    Each testcase contains of a single line of input, two integers A,B.
 
 Output Format
 
-    For each query, output the number of tuples possible as mentioned in the 
-    problem statement.
+    For each testcase, output the maximum sum of ⌈(B−X)/2⌉+⌈(X−A)/2⌉.
 
 Constraints
 
-    1≤T≤10^3
-    1≤N,Q≤10^5
-    0≤Ai≤10^6
-    1≤Li≤Ri≤N
-
-    The sum of N over all test cases does not exceed 10^6.
-    The sum of Q over all test cases does not exceed 10^5
+    1≤T≤10^5
+    1≤A,B≤10^9
 
 Sample Input 1
 
-    1
-    6 3
-    1 2 3 4 5 6
-    1 3
-    2 5
-    1 6
+    3
+    2 2
+    1 11
+    13 6
 
 Sample Output 1
 
-    1
-    2
-    10
+    0
+    6
+    -3
 
 Explanation
 
-    For the first query, we can choose (1,2,3) since A1+A2+A3=6 is an even number. 
-    For the second query, we can choose (2,3,5) since A2+A3+A5=10 is even, and (3,4,5) 
-    since A3+A4+A5=12 is even.
+    In the first test case, there is only one possible value of X which is equal to 2. 
+    So the sum is equal to ⌈(2−2)/2⌉+⌈(2−2)/2⌉ = ⌈0⌉+⌈0⌉ = 0+0=0.
+
+    In the second test case, we can choose X to be 2. So sum is equal to ⌈(11−2)/2⌉+
+    ⌈(2−1)/2⌉ = ⌈ 4.5⌉+⌈ 0.5⌉ = 5+1=6. There is no possible way to choose an integer X 
+    in the range [1,11] such that sum is greater than 6.
 ```
