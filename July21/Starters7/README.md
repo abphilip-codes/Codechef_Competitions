@@ -1,55 +1,48 @@
-# July 2021: Starters 6
+# July 2021: Starters 7
 
 ```
-1. In a season, each player has three statistics: runs, wickets, and catches. Given 
-the season stats of two players A and B, denoted by R, W, and C respectively, the 
-person who is better than the other in the most statistics is regarded as the better
-overall player. Tell who is better amongst A and B. It is known that in each statistic, 
-the players have different values.
+1. Given the time control of a chess match as a+b, determine which format of chess out 
+of the given 4 it belongs to.
+    1) Bullet if a+b<3
+    2) Blitz if 3≤a+b≤10
+    3) Rapid if 11≤a+b≤60
+    4) Classical if 60<a+b
 
 Input Format
 
-    The first line contains an integer T, the number of test cases. Then the test 
-    cases follow. Each test case contains two lines of input. The first line contains 
-    three integers R1, W1, C1, the stats for player A.
-    The second line contains three integers R2, W2, C2, the stats for player B.
+    First line will contain T, number of testcases. Then the testcases follow.
+    Each testcase contains a single line of input, two integers a,b.
 
 Output Format
 
-    For each test case, output in a single line "A" (without quotes) if player A
-    is better than player B and "B" (without quotes) otherwise.
+    For each testcase, output in a single line, answer 1 for bullet, 2 for blitz, 
+    3 for rapid, and 4 for classical format.
 
 Constraints
 
-    1≤T≤1000
-    0≤R1,R2≤500
-    0≤W1,W2≤20
-    0≤C1,C2≤20
-    R1≠R2
-    W1≠W2
-    C1≠C2
+    1≤T≤1100
+    1≤a≤100
+    0≤b≤10
 
 Sample Input 1
 
-    3
-    0 1 2
-    2 3 4
-    10 10 10
-    8 8 8
-    10 0 10
-    0 10 0
+    4
+    1 0
+    4 1
+    100 0
+    20 5
 
 Sample Output 1
 
-    B
-    A
-    A
+    1
+    2
+    4
+    3
 
 Explanation
 
-    Test Case 1: Player B is better than A in all 3 fields.
-    Test Case 2: Player A is better than B in all 3 fields.
-    Test Case 3: Player A is better than B in runs scored and number of catches.
+    TestCase 1: Since a+b=1<3, it belongs to bullet format.
+    TestCase 2: Since 3≤(a+b=5)≤10, it belongs to blitz format.
 ```
 <br />
 
