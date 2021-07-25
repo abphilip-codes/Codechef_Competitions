@@ -198,3 +198,62 @@ Explanation
     ⌈(2−1)/2⌉ = ⌈ 4.5⌉+⌈ 0.5⌉ = 5+1=6. There is no possible way to choose an integer X 
     in the range [1,11] such that sum is greater than 6.
 ```
+<br />
+
+```
+5. Chef goes to a candy store that sells N different candies. For each candy, we know 
+its price and sweetness. Chef has D dollars and can take a maximum of 2 candies, one 
+in each hand. Find the maximum total sweetness he can buy under the given constraints.
+
+NOTE: Since the input-output is large, prefer using fast input-output methods.
+
+Input Format
+
+    The first line contains an integer T, the number of test cases. Then the test cases follow.
+    Each test case contains three lines of input.
+    First line will contain 2 space separated integers N and D, the number of different 
+    candies and the amount of money Chef has.
+    Second line contains N space separated integers P1,P2,…,PN, where Pi is the price of the ith candy.
+    Third line contains N space separated integers S1,S2,…,SN, where Si is the sweetness of the ith candy.
+
+Output Format
+
+    For each testcase, output in a single line, the maximum total sweetness Chef can 
+    buy with the money he has, and with at most two candies.
+
+Constraints
+
+    1≤T≤2.5∗10^5
+    1≤N≤10^5
+    1≤D≤10^9
+    1≤Pi,Si≤10^9
+    Sum N over all testcases is atmost 10^6.
+
+Sample Input 1
+
+    3
+    2 10
+    1 2 
+    2 1 
+    5 7
+    1 2 3 4 5
+    1 2 3 4 5
+    5 7
+    6 6 6 6 6
+    5 4 3 2 1
+
+Sample Output 1
+
+    3
+    7
+    5
+
+Explanation
+
+    TestCase 1: Chef can collect both the candies available with the money he has.
+    TestCase 2: Chef can collect candies at index [2,5] or [3,4]. In both cases, he will 
+    get the total sweetness of 7.
+    TestCase 3: Since the price of all candies is the same, it's always optimal to choose 
+    the candies with maximum sweetness. Also, in this case, no more than one candy can be 
+    chosen. 
+```
