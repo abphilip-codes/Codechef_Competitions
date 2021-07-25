@@ -1,4 +1,5 @@
 # https://www.codechef.com/START7C/problems/MAXSWT
+# Incomplete
 
 for T in range(int(input())):
     N,D=map(int,input().split())
