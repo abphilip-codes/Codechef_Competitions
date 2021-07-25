@@ -102,70 +102,54 @@ So the answer is 4, since it is the last level to receive non-zero energy.
 <br />
 
 ```
-3. During a fight with the Joker, Batman's eyes lose the capability to distinguish 
-between some pairs of colors. Each color has an integer ID from 1 to N. There are 
-M lists where each color belongs to exactly one list. Batman can distinguish colors belonging to different lists, but he cannot distinguish colors belonging to the same 
-list. Given a strip of L colors, find the different number of segments Batman will 
-see as a result of his disability. Two positions of the strip are said to belong to 
-the same segment if they are adjacent on the strip and Batman cannot distinguish their 
-colors. See the sample explanation for clarity.
+3. Value of an array A of length L is defined as the sum of (Ai⊕i) for all 0≤i<L, where ⊕
+denotes bitwise xor operation. Note that array indices start from zero. You are given an integer N and an array A consisting of 2^N integers where Ai=i for all 0≤i<2^N.
+
+Example :
+
+    For N=1, you have an array A of length 21=2 and A=[0,1].
+    For N=2, you have an array A of length 22=4 and A=[0,1,2,3].
+
+    You can do at most K operations on this array. In one operation, you can choose two 
+    indices i and j (0≤i,j<2N) and swap Ai and Aj (i.e. Ai becomes Aj and vice versa).
+    What is the maximum value of array A you can obtain after at most K operations?
 
 Input Format
 
-    The first line contains an integer T, the number of test cases. 
-    Then the test cases follow.
-    The first line contain three integers N, M, and L - the number of colors, the 
-    number of lists, and the length of the strip, respectively.
-    Each of the next M lines describes a list. It begins with an integer Ki, 
-    the length of the i-th list, followed by Ki integers Ai1,Ai2,…,AiKi - the color 
-    IDs of the i-th list.
-    The next line contains L integers S1,S2,…,SL - the color IDs of the strip.
+    First line will contain T, number of testcases. Then the testcases follow.
+    Each testcase contains a single line of input, two integers N,K.
 
 Output Format
 
-    For each test case, output in a single line the answer to the problem.
+    For each testcase, output in a single line the maximum value of array after 
+    doing at most K operations.
 
 Constraints
 
-    1≤T≤10
-    1≤M≤N≤10^5
-    1≤L≤10^5
-    1≤Ki,Aij,Si≤N
-    ∑Mi=1Ki=N
-
-    Each color belongs to exactly one list.
+    1≤T≤10^5
+    1≤N≤30  
+    0≤K≤10^9
 
 Sample Input 1
 
     3
-    2 2 2
-    1 2
-    1 1
+    2 0
     2 1
-    2 2 4
-    1 1
-    1 2
-    1 2 2 1
-    3 2 3
-    2 1 3
-    1 2
-    1 3 1
+    10 100
 
 Sample Output 1
 
-    2
-    3
-    1
+    0
+    6
+    204600
 
 Explanation
 
-    Test Case 1: Since the strip is composed of colors from different lists, the 
-    answer is the length of the strip, which is 2.
-    Test Case 2: The first and second index have colors from different lists, and the 
-    third and fourth index have colors from different lists. So the strip is seen to 
-    be composed of 3 consecutive segments.
-    Test Case 3: Since the strip is composed of colors from the same list, the answer 
-    is 1 segment.
+    In the first test case, for N=2, you have the array A=[0,1,2,3]. No swap operation 
+    is allowed hence value of array A=(0⊕0)+(1⊕1)+(2⊕2)+(3⊕3)=0+0+0+0=0.
+    In the second test case, initially the array A=[0,1,2,3]. If you swap A1 and A2, 
+    A becomes [0,2,1,3]. Now value of array A=(0⊕0)+(2⊕1)+(1⊕2)+(3⊕3)=0+3+3+0=6. There 
+    is no possible way such that value of array A becomes greater than 6 using one swap operation.
 ```
 <br />
 
