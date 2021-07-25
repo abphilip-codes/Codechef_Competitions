@@ -1,4 +1,5 @@
 # https://www.codechef.com/JULY21C/problems/MINNOTES
+
 def repeat(a,b):
     while(b):
         a,b=b,a%b
