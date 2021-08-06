@@ -2,4 +2,4 @@
 
 for T in range(int(input())):
     n,p,k = map(int,input().split())
-    print(((n//k))*(p%k)+(p//k)+1)
+    print((n//k)*(p%k)+(min(n%k,p%k))+(p//k)+1)
