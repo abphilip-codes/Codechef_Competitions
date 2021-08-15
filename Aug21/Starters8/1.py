@@ -1,4 +1,4 @@
-#
+# https://www.codechef.com/START8C/problems/PENALTY
 
 for T in range(int(input())):
     n=list(map(int,input().split()))
