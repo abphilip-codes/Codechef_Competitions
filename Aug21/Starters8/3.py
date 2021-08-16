@@ -9,10 +9,10 @@ for T in range(int(input())):
     else: turn+=1
     if(cx==bx or cy==by): 
         if(cx==bx and ax==bx): 
-            if(bx not in range(min(ax,cx),max(ax,cx)+1)): turn=2
+            if(bx not in range(min(ax,cx),max(ax,cx)+1)): turn=100
             turn+=0
         elif(cy==by and ay==by): 
-            if(by not in range(min(ay,cy),max(ay,cy)+1)): turn=2
+            if(by not in range(min(ay,cy),max(ay,cy)+1)): turn=100
             turn+=0
         else: turn+=1
     else: turn+=2
