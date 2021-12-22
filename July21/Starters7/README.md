@@ -1,1 +1,0 @@
-# July 2021: Starters 7
